@@ -45,11 +45,9 @@
 
 *Explore, learn, and join me on this cybersecurity journey!*
 
-<!-- Dark Mode Toggle Button -->
 <button id="dark-mode-toggle">Toggle Dark Mode</button>
 
 <script>
-// Toggle between light and dark mode
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.getElementById("dark-mode-toggle");
     toggleButton.addEventListener("click", function() {
