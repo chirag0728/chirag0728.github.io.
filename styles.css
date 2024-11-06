@@ -4,12 +4,14 @@
 /* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Light gray */
     color: #333333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 /* Header Section */
@@ -17,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000; /* True black background */
+    background-color: #000000; /* True black */
     color: #ffffff;
     padding: 10px 20px;
     position: relative;
@@ -38,6 +40,7 @@ body {
 .profile-name {
     font-size: 1.2em;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .header-title {
@@ -46,7 +49,7 @@ body {
 }
 
 .header-title h1 {
-    font-size: 2.5em;
+    font-size: 1.8em;
     font-weight: bold;
     color: #ffffff;
     margin: 0;
@@ -82,7 +85,7 @@ body {
     background-color: #58a6ff;
     height: 3px;
     width: 100%;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Transform Hamburger Icon into "X" */
@@ -98,17 +101,17 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Sidebar (Pane) Styling */
+/* Sidebar Styling */
 .sidebar {
     width: 250px;
-    background-color: #000000; /* True black */
+    background-color: #1a1a1a; /* Darker black */
     color: #ffffff;
     position: fixed;
     top: 0;
     left: -250px; /* Initially hidden off-screen */
     height: 100vh;
     overflow-y: auto;
-    transition: left 0.3s ease; /* Slide-in effect */
+    transition: left 0.3s ease;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
@@ -165,7 +168,7 @@ body {
     max-width: 800px;
     background-color: #ffffff;
     color: #333333;
-    margin-top: 60px; /* Add space below header */
+    margin-top: 20px;
     transition: transform 0.3s ease;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -200,6 +203,17 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Section Headers */
+h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 8px;
 }
 
 /* Bullet Points and Lists */
