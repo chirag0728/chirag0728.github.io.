@@ -1,15 +1,25 @@
-/* Import Source Code Pro font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
-
 /* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: #000000; /* Set background to true black */
+    background-color: #000000; /* True black background */
     color: #c8c8c8;
-    line-height: 1.4;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Center the content */
     overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Centering Content */
+.content {
+    padding: 20px;
+    max-width: 800px;
+    transition: transform 0.3s ease; /* Smooth shift on sidebar open */
+}
+
+/* Shift content to the right when sidebar opens */
+.content.shifted {
+    transform: translateX(250px);
 }
 
 /* Sidebar Styling */
@@ -32,7 +42,7 @@ body {
 }
 
 .site-navigation {
-    margin-top: 60px; /* Lower site navigation */
+    margin-top: 60px; /* Position site navigation lower */
 }
 
 .sidebar h2 {
@@ -80,50 +90,27 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Ensure there's no background or border around the button */
+/* Transform Hamburger Icon into "X" */
+.sidebar-toggle.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.sidebar-toggle.active .line2 {
+    opacity: 0; /* Hide the middle line */
+}
+
+.sidebar-toggle.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* No Background or Border for Sidebar Toggle */
 .sidebar-toggle {
     background: none;
     border: none;
     padding: 0;
 }
 
-/* Main Content Styling */
-.content {
-    padding: 20px;
-    margin-left: 40px; /* Space for the toggle button */
-    max-width: 800px;
-}
-
-/* Header Styling */
-h1, h2, h3, h4, h5, h6 {
-    color: #58a6ff;
-    font-weight: bold;
-    font-family: "Source Code Pro", monospace;
-}
-
-/* Links */
-a {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Dark Mode Button */
-.dark-mode-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #58a6ff;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-/* Light Mode Styling */
+/* Dark Mode Styling */
 body.light-mode {
     background-color: #ffffff;
     color: #333333;
