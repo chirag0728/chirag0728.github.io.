@@ -1,15 +1,59 @@
 /* Import Source Code Pro font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
-/* Apply monospaced font globally */
+/* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
     background-color: #1e1e1e;
     color: #c8c8c8;
-    line-height: 1.4; /* Slightly reduced line height */
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex; /* Enable flex layout for sidebar and content */
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 220px;
+    background-color: #2a2a2a;
     padding: 20px;
+    position: fixed; /* Keep sidebar fixed on the left */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full height */
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #58a6ff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+.sidebar a {
+    color: #58a6ff;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+.content {
+    margin-left: 240px; /* Space to the right of the sidebar */
+    padding: 20px;
+    max-width: 800px;
 }
 
 /* Header Styling */
@@ -17,46 +61,24 @@ h1, h2, h3, h4, h5, h6 {
     color: #58a6ff;
     font-weight: bold;
     font-family: "Source Code Pro", monospace;
-    margin-left: 20px; /* Indent headers */
-}
-
-/* Links and List Items */
-ul, ol {
-    padding-left: 40px;
-    margin-top: 3px; /* Reduced spacing between list items */
-    list-style: none; /* Remove default bullets */
-}
-
-/* Style individual links with tighter spacing */
-ul li a {
-    display: block;
-    margin-bottom: 4px; /* Reduce space between links */
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Divider Styling */
-.divider {
-    border-top: 1px solid #58a6ff; /* Light blue divider */
-    margin: 10px 0; /* Adjust spacing around dividers */
-}
-
-/* Blockquotes */
-blockquote {
-    border-left: 3px solid #58a6ff;
-    color: #d1d1d1;
-    padding-left: 15px;
-    margin-left: 0;
-    font-style: italic;
 }
 
 /* Light Mode Styling */
 body.light-mode {
     background-color: #ffffff;
+    color: #333333;
+}
+
+body.light-mode .sidebar {
+    background-color: #f0f0f0;
+}
+
+body.light-mode .sidebar h2,
+body.light-mode .sidebar a {
+    color: #1e70bf;
+}
+
+body.light-mode .content {
     color: #333333;
 }
 
@@ -67,12 +89,4 @@ body.light-mode h4,
 body.light-mode h5, 
 body.light-mode h6 {
     color: #333333;
-}
-
-body.light-mode a {
-    color: #1e70bf;
-}
-
-body.light-mode .divider {
-    border-top: 1px solid #1e70bf;
 }
