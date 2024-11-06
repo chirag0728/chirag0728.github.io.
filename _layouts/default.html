@@ -13,11 +13,11 @@
 </head>
 <body>
 
-    <!-- Sidebar Toggle Button with animation lines -->
+    <!-- Sidebar Toggle Button with static 3-line icon -->
     <div id="sidebar-toggle" class="sidebar-toggle">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
     </div>
 
     <!-- Sidebar Navigation -->
@@ -72,15 +72,13 @@
                 document.body.classList.add("light-mode");
             }
 
-            // Sidebar and Button Animation
+            // Sidebar Toggle Functionality
             toggleButton.addEventListener("click", function() {
-                sidebar.classList.add("active"); // Show sidebar
-                toggleButton.classList.toggle("active"); // Animate the hamburger to an "X"
+                sidebar.classList.toggle("active"); // Show or hide sidebar
             });
 
             closeSidebar.addEventListener("click", function() {
                 sidebar.classList.remove("active"); // Hide sidebar
-                toggleButton.classList.remove("active"); // Reset hamburger icon
             });
         });
     </script>
