@@ -34,7 +34,7 @@ title: "Chirag's Cybersecurity Vault"
 <div class="divider"></div>
 
 ### 🏁 CTF Challenges
-- [CTF Challenges](./CTF%20Challenges.md)
+- [CTF Challenges](./Challenges.md)
   - Write-ups from Capture The Flag (CTF) challenges.
 
 <div class="divider"></div>
