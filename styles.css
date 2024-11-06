@@ -59,7 +59,7 @@ body {
     text-decoration: underline;
 }
 
-/* Sidebar Toggle Button */
+/* Sidebar Toggle Button (3-line Hamburger) */
 .sidebar-toggle {
     position: fixed;
     top: 20px;
@@ -68,26 +68,16 @@ body {
     z-index: 1100;
     width: 30px;
     height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.line {
+.sidebar-toggle .line {
     background-color: #58a6ff;
     height: 3px;
-    margin: 5px 0;
+    width: 100%;
     transition: all 0.3s ease;
-}
-
-/* Hamburger to X Animation */
-.sidebar-toggle.active .line1 {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.sidebar-toggle.active .line2 {
-    opacity: 0; /* Hide the middle line */
-}
-
-.sidebar-toggle.active .line3 {
-    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Main Content Styling */
