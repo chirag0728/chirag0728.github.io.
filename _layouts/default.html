@@ -5,31 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
 
-    <!-- Link to custom CSS for monospaced font and layout styles -->
+    <!-- Link to custom CSS for layout styles -->
     <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
 
-    <!-- Font Awesome for icons (optional) -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+    <!-- Sidebar Toggle Button -->
+    <button id="sidebar-toggle" class="sidebar-toggle">
+        <i class="fas fa-bars"></i> <!-- Menu icon -->
+    </button>
+
     <!-- Sidebar Navigation -->
-    <div class="sidebar">
+    <div id="sidebar" class="sidebar">
+        <button id="close-sidebar" class="close-sidebar">
+            <i class="fas fa-times"></i> <!-- Close icon -->
+        </button>
         <h2>📖 Site Navigation</h2>
         <ul>
             <li><a href="{{ '/index.md' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/aboutblog.md' | relative_url }}">About the Blog</a></li>
-            <li><a href="{{ '/Literature%20Notes.md' | relative_url }}">Literature Notes</a></li>
-            <li><a href="{{ '/Topics%20Covered.md' | relative_url }}">Topics Covered</a></li>
-            <li><a href="{{ '/Learning%20Summaries.md' | relative_url }}">Learning Summaries</a></li>
-            <li><a href="{{ '/CTF%20Challenges.md' | relative_url }}">CTF Challenges</a></li>
-            <li><a href="{{ '/Weekly%20Write-Ups.md' | relative_url }}">Weekly Write-Ups</a></li>
-            <li><a href="{{ '/Research%20Notes.md' | relative_url }}">Research Notes</a></li>
-            <li><a href="{{ '/Project%20Updates.md' | relative_url }}">Project Updates</a></li>
-            <li><a href="{{ '/My%20Projects.md' | relative_url }}">My Projects</a></li>
-            <li><a href="{{ '/My%20Approach.md' | relative_url }}">My Approach</a></li>
-            <li><a href="{{ '/Get%20Involved.md' | relative_url }}">Get Involved</a></li>
-            <li><a href="{{ '/License.md' | relative_url }}">License</a></li>
+            <li><a href="{{ '/aboutblog.md' | relative_url }}">About Me</a></li>
+            <li><a href="{{ '/Literature%20Notes.md' | relative_url }}">Resume</a></li>
+            <!-- Add more links as needed -->
         </ul>
     </div>
 
@@ -38,13 +37,14 @@
         {{ content }}
     </div>
 
-    <!-- Dark Mode Toggle Button, positioned at the bottom right -->
-    <button id="dark-mode-toggle" style="position: fixed; bottom: 20px; right: 20px;">
+    <!-- Dark Mode Toggle Button -->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
         Toggle Dark Mode
     </button>
 
-    <!-- JavaScript for Dark Mode Toggle -->
+    <!-- JavaScript for Sidebar and Dark Mode Toggle -->
     <script>
+        // Dark Mode Toggle
         document.addEventListener("DOMContentLoaded", function() {
             const toggleButton = document.getElementById("dark-mode-toggle");
             toggleButton.addEventListener("click", function() {
@@ -56,6 +56,19 @@
             if (localStorage.getItem("theme") === "light") {
                 document.body.classList.add("light-mode");
             }
+
+            // Sidebar Toggle
+            const sidebar = document.getElementById("sidebar");
+            const sidebarToggle = document.getElementById("sidebar-toggle");
+            const closeSidebar = document.getElementById("close-sidebar");
+
+            sidebarToggle.addEventListener("click", function() {
+                sidebar.classList.add("active"); // Show sidebar
+            });
+
+            closeSidebar.addEventListener("click", function() {
+                sidebar.classList.remove("active"); // Hide sidebar
+            });
         });
     </script>
 </body>
