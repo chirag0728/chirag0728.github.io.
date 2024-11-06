@@ -29,6 +29,21 @@ body {
     transform: translateX(250px); /* Move content to the right */
 }
 
+/* Page Image Styling */
+.page-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-image img {
+    width: 100%;
+    max-width: 800px; /* Optional: Limit the maximum width */
+    height: auto;
+    border-radius: 8px; /* Rounded corners (optional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-top: 20px;
+}
+
 /* Sidebar (Pane) Styling */
 .sidebar {
     width: 250px;
@@ -119,7 +134,53 @@ body {
     padding: 0;
 }
 
-/* Light Mode Styling */
+/* Link Styling */
+a {
+    color: #1e70bf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styling */
+h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+    font-weight: bold;
+    font-family: "Source Code Pro", monospace;
+}
+
+/* Bullet Points and Lists */
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin: 5px 0;
+}
+
+/* Code Blocks */
+code, pre {
+    background-color: #f5f5f5;
+    color: #333333;
+    padding: 5px;
+    border-radius: 4px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.9em;
+    overflow-x: auto;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 3px solid #1e70bf;
+    color: #666666;
+    padding-left: 15px;
+    margin-left: 0;
+    font-style: italic;
+}
+
+/* Dark Mode Styling */
 body.light-mode {
     background-color: #ffffff;
     color: #333333;
