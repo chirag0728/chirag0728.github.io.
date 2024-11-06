@@ -1,20 +1,15 @@
 /* Import Source Code Pro font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
-/* General Page Layout */
+/* Apply monospaced font globally */
 body {
     font-family: "Source Code Pro", monospace;
     background-color: #1e1e1e;
     color: #c8c8c8;
-    line-height: 1.4; /* Slightly reduce line-height for tighter spacing */
+    line-height: 1.4; /* Slightly reduced line height */
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
-
-/* Reduce spacing between sections */
-section.overview {
-    margin-bottom: 10px; /* Less space between sections */
 }
 
 /* Header Styling */
@@ -22,27 +17,32 @@ h1, h2, h3, h4, h5, h6 {
     color: #58a6ff;
     font-weight: bold;
     font-family: "Source Code Pro", monospace;
-    margin-left: 20px; /* Indent all titles to the left */
+    margin-left: 20px; /* Indent headers */
 }
 
-/* Indent Links and List Items */
+/* Links and List Items */
 ul, ol {
-    padding-left: 40px; /* Increase padding for indentation */
-    margin-top: 5px; /* Reduce margin between items */
-    list-style: none; /* Remove default bullet points */
+    padding-left: 40px;
+    margin-top: 3px; /* Reduced spacing between list items */
+    list-style: none; /* Remove default bullets */
 }
 
-/* Style individual links with tight spacing */
+/* Style individual links with tighter spacing */
 ul li a {
     display: block;
-    margin-bottom: 5px; /* Space between links */
+    margin-bottom: 4px; /* Reduce space between links */
     color: #58a6ff;
     text-decoration: none;
-    font-weight: normal;
 }
 
 ul li a:hover {
     text-decoration: underline;
+}
+
+/* Divider Styling */
+.divider {
+    border-top: 1px solid #58a6ff; /* Light blue divider */
+    margin: 10px 0; /* Adjust spacing around dividers */
 }
 
 /* Blockquotes */
@@ -71,4 +71,8 @@ body.light-mode h6 {
 
 body.light-mode a {
     color: #1e70bf;
+}
+
+body.light-mode .divider {
+    border-top: 1px solid #1e70bf;
 }
