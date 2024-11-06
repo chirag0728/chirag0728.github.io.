@@ -4,29 +4,31 @@
 /* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: #ffffff; /* Set background to white */
-    color: #333333; /* Dark text for readability on white background */
-    line-height: 1.4;
+    background-color: #f8f9fa; /* Light grey for subtle contrast */
+    color: #333333;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center the content */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 /* Centering Content */
 .content {
     padding: 20px;
     max-width: 800px;
-    transition: transform 0.3s ease; /* Smooth shift on sidebar open */
+    transition: transform 0.3s ease;
     background-color: #ffffff; /* White background for main content */
-    color: #333333; /* Dark text on content */
-    margin-left: 0; /* Default centered */
+    color: #333333;
+    margin-left: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 /* Shift content to the right when sidebar opens */
 .content.shifted {
-    transform: translateX(250px); /* Move content to the right */
+    transform: translateX(250px);
 }
 
 /* Page Image Styling */
@@ -37,41 +39,42 @@ body {
 
 .page-image img {
     width: 100%;
-    max-width: 800px; /* Optional: Limit the maximum width */
+    max-width: 800px;
     height: auto;
-    border-radius: 8px; /* Rounded corners (optional) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
 }
 
 /* Sidebar (Pane) Styling */
 .sidebar {
     width: 250px;
-    background-color: #000000; /* True black background for the sidebar */
-    color: #ffffff; /* White text in sidebar */
+    background-color: #000000;
+    color: #ffffff;
     position: fixed;
     top: 0;
-    left: -250px; /* Start off-screen */
+    left: -250px;
     height: 100vh;
     overflow-y: auto;
-    transition: left 0.3s ease; /* Slide-in effect */
+    transition: left 0.3s ease;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
 .sidebar.active {
-    left: 0; /* Slide in when active */
+    left: 0;
 }
 
 .site-navigation {
-    margin-top: 60px; /* Position site navigation lower */
+    margin-top: 60px;
 }
 
 .sidebar h2 {
     color: #58a6ff;
     font-size: 1.2em;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .sidebar ul {
@@ -86,13 +89,14 @@ body {
 .sidebar a {
     color: #58a6ff;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .sidebar a:hover {
     text-decoration: underline;
 }
 
-/* Sidebar Toggle Button (3-line Hamburger) */
+/* Sidebar Toggle Button */
 .sidebar-toggle {
     position: fixed;
     top: 20px;
@@ -120,7 +124,7 @@ body {
 }
 
 .sidebar-toggle.active .line2 {
-    opacity: 0; /* Hide the middle line */
+    opacity: 0;
 }
 
 .sidebar-toggle.active .line3 {
@@ -134,21 +138,29 @@ body {
     padding: 0;
 }
 
+/* Section Headers */
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 8px;
+}
+
 /* Link Styling */
 a {
-    color: #1e70bf;
+    color: #007bff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Header Styling */
-h1, h2, h3, h4, h5, h6 {
-    color: #333333;
-    font-weight: bold;
-    font-family: "Source Code Pro", monospace;
 }
 
 /* Bullet Points and Lists */
@@ -157,7 +169,7 @@ ul, ol {
 }
 
 ul li, ol li {
-    margin: 5px 0;
+    margin: 8px 0;
 }
 
 /* Code Blocks */
@@ -173,37 +185,14 @@ code, pre {
 
 /* Blockquotes */
 blockquote {
-    border-left: 3px solid #1e70bf;
-    color: #666666;
+    border-left: 4px solid #007bff;
+    color: #555555;
     padding-left: 15px;
     margin-left: 0;
     font-style: italic;
-}
-
-/* Dark Mode Styling */
-body.light-mode {
-    background-color: #ffffff;
-    color: #333333;
-}
-
-body.light-mode .sidebar {
-    background-color: #000000;
-}
-
-body.light-mode .sidebar h2,
-body.light-mode .sidebar a {
-    color: #58a6ff;
-}
-
-body.light-mode h1, 
-body.light-mode h2, 
-body.light-mode h3, 
-body.light-mode h4, 
-body.light-mode h5, 
-body.light-mode h6 {
-    color: #333333;
-}
-
-body.light-mode a {
-    color: #1e70bf;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
