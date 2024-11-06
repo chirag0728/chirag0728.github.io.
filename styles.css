@@ -11,13 +11,13 @@ body {
 
 /* Header Styling */
 h1, h2, h3, h4, h5, h6 {
-    color: #58a6ff; /* Light blue for headers */
+    color: #58a6ff; /* Light blue color for headers */
     font-weight: bold;
 }
 
 /* Links */
 a {
-    color: #58a6ff;
+    color: #58a6ff; /* Light blue for links */
     text-decoration: none;
 }
 
@@ -73,4 +73,47 @@ blockquote {
     border-radius: 5px;
     color: #c8c8c8;
     font-size: 0.9em;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4, 
+body.light-mode h5, 
+body.light-mode h6 {
+    color: #333333; /* Dark text for headers */
+}
+
+body.light-mode a {
+    color: #1e70bf; /* Darker blue for links in light mode */
+}
+
+body.light-mode code, 
+body.light-mode pre {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+/* Light Mode Blockquote */
+body.light-mode blockquote {
+    border-left: 3px solid #1e70bf;
+    color: #666666;
+}
+
+/* Light Mode Tag */
+body.light-mode .tag {
+    background-color: #ddd;
+    color: #333333;
+}
+
+/* Light Mode Properties */
+body.light-mode .properties {
+    background-color: #f0f0f0;
+    color: #333333;
 }
