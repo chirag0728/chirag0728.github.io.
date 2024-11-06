@@ -3,7 +3,7 @@
 
 /* General Page Layout */
 body {
-    font-family: "Source Code Pro", monospace; /* Monospaced font for an Obsidian-like feel */
+    font-family: "Source Code Pro", monospace; /* Monospaced font */
     background-color: #1e1e1e; /* Dark background */
     color: #c8c8c8; /* Light text color */
     line-height: 1.6;
@@ -16,7 +16,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: #58a6ff; /* Light blue color for headers */
     font-weight: bold;
-    font-family: "Source Code Pro", monospace; /* Apply monospace font to headers */
 }
 
 /* Links */
@@ -35,7 +34,7 @@ code, pre {
     color: #e5e5e5;
     padding: 5px;
     border-radius: 4px;
-    font-family: "Source Code Pro", monospace; /* Monospaced font for code blocks */
+    font-family: "Source Code Pro", monospace; /* Monospaced font for code */
     font-size: 0.9em;
     overflow-x: auto;
 }
@@ -83,7 +82,7 @@ blockquote {
 body.light-mode {
     background-color: #ffffff;
     color: #333333;
-    font-family: "Source Code Pro", monospace; /* Monospaced font in light mode */
+    font-family: "Source Code Pro", monospace;
 }
 
 body.light-mode h1, 
