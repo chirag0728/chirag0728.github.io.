@@ -1,0 +1,12 @@
+title: "Cybersecurity Vault"
+description: "Notes on Cybersecurity, Learning and Projects"
+theme: jekyll-theme-minimal  # Base theme
+markdown: kramdown
+
+# Include custom CSS for styling
+include:
+  - styles.css
+
+# Exclude unnecessary files from the site
+exclude:
+  - README.md
