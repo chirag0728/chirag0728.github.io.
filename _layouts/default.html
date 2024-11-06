@@ -10,12 +10,26 @@
 </head>
 <body>
 
-    <!-- Sidebar Toggle Button with 3-line icon -->
-    <div id="sidebar-toggle" class="sidebar-toggle">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
-    </div>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-left">
+            <div id="sidebar-toggle" class="sidebar-toggle">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+            <img src="/path/to/profile.jpg" alt="Profile Picture" class="profile-image">
+            <span class="profile-name">Chirag Dewan</span>
+        </div>
+        
+        <div class="header-title">
+            <h1>{{ page.title }}</h1>
+        </div>
+        
+        <div class="header-right">
+            <i class="fas fa-search search-icon"></i> <!-- Search Icon -->
+        </div>
+    </header>
 
     <!-- Sidebar Navigation -->
     <div id="sidebar" class="sidebar">
@@ -27,7 +41,7 @@
                 <li><a href="{{ '/' | relative_url }}">Home</a></li>
                 <li><a href="{{ '/Literature%20Notes.md' | relative_url }}">Literature Notes</a></li>
                 <li><a href="{{ '/Topics%20Covered.md' | relative_url }}">Topics Covered</a></li>
-                <!-- Add other specific links here as needed -->
+                <!-- Add other links as needed -->
             </ul>
         </div>
     </div>
@@ -51,9 +65,9 @@
             const content = document.querySelector(".content");
 
             toggleButton.addEventListener("click", function() {
-                sidebar.classList.toggle("active"); // Show or hide sidebar
-                toggleButton.classList.toggle("active"); // Transform hamburger into "X"
-                content.classList.toggle("shifted"); // Shift content to the right
+                sidebar.classList.toggle("active");
+                toggleButton.classList.toggle("active");
+                content.classList.toggle("shifted");
             });
         });
     </script>
