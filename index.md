@@ -1,7 +1,7 @@
 # Index: Chirag's Cybersecurity Vault
 
 ## 🗂 Overview
-- [Learning Journey](./Chirag%27s%20Cybersecurity%20Learning%20Journey.md): My journey, goals, and content overview.
+- [Learning Journey](./LearningJourney.md): My journey, goals, and content overview.
 
 ## 🏷️ Sections
 
