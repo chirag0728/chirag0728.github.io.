@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Chirag's Cybersecurity Vault"
+---
+
 # Index: Chirag's Cybersecurity Vault
 
 ## 🗂 Overview
