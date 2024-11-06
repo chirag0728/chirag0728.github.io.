@@ -3,6 +3,7 @@ body {
     font-family: "Source Code Pro", monospace;
     background-color: #000000; /* True black background */
     color: #c8c8c8;
+    line-height: 1.4;
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,11 +16,12 @@ body {
     padding: 20px;
     max-width: 800px;
     transition: transform 0.3s ease; /* Smooth shift on sidebar open */
+    margin-left: 0; /* Default centered */
 }
 
 /* Shift content to the right when sidebar opens */
 .content.shifted {
-    transform: translateX(250px);
+    transform: translateX(250px); /* Move content to the right */
 }
 
 /* Sidebar Styling */
@@ -83,6 +85,7 @@ body {
     justify-content: space-around;
 }
 
+/* Hamburger Lines */
 .sidebar-toggle .line {
     background-color: #58a6ff;
     height: 3px;
