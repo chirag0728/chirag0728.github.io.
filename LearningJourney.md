@@ -1,8 +1,3 @@
----
-layout: default
-title: "Learning Journey"
----
-
 # Cybersecurity Learning Journey
 
 Hey there! I'm Chirag, and welcome to my cybersecurity journey. I'm a security researcher who loves offensive security, and this blog is my way of sharing the challenges, wins, and insights I pick up along the way.
