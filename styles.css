@@ -4,7 +4,7 @@
 /* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: #f8f9fa; /* Light gray */
+    background-color: #f8f9fa;
     color: #333333;
     line-height: 1.6;
     margin: 0;
@@ -19,10 +19,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000000; /* True black */
+    background-color: #000000;
     color: #ffffff;
     padding: 10px 20px;
-    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 1100;
 }
 
 .header-left {
@@ -94,7 +98,7 @@ body {
 }
 
 .sidebar-toggle.active .line2 {
-    opacity: 0; /* Hide the middle line */
+    opacity: 0;
 }
 
 .sidebar-toggle.active .line3 {
@@ -104,11 +108,11 @@ body {
 /* Sidebar Styling */
 .sidebar {
     width: 250px;
-    background-color: #1a1a1a; /* Darker black */
+    background-color: #1a1a1a;
     color: #ffffff;
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden off-screen */
+    left: -250px;
     height: 100vh;
     overflow-y: auto;
     transition: left 0.3s ease;
@@ -118,7 +122,7 @@ body {
 }
 
 .sidebar.active {
-    left: 0; /* Slide in when active */
+    left: 0;
 }
 
 .close-sidebar {
@@ -135,6 +139,7 @@ body {
 
 .site-navigation {
     margin-top: 60px;
+    text-align: left;
 }
 
 .sidebar h2 {
@@ -168,10 +173,11 @@ body {
     max-width: 800px;
     background-color: #ffffff;
     color: #333333;
-    margin-top: 20px;
+    margin-top: 80px; /* Space for fixed header */
     transition: transform 0.3s ease;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* Shift content to the right when sidebar opens */
@@ -219,6 +225,7 @@ h2 {
 /* Bullet Points and Lists */
 ul, ol {
     padding-left: 20px;
+    text-align: left;
 }
 
 ul li, ol li {
