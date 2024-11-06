@@ -1,31 +1,51 @@
 # Index: Chirag's Cybersecurity Vault
 
 ## 🗂 Overview
-- [Learning Journey](./LearningJourney.md): My journey, goals, and content overview.
-
-## 🏷️ Sections
 
 ### 🔍 About the Blog
-- [About the Blog](./aboutblog.md): Purpose, goals, and research areas.
+- [About the Blog](./aboutblog.md)
+  - Purpose of the blog, including learning goals, research areas, and key content types like research notes and CTFs.
 
-### 🔐 Topics and Literature
-- [Topics and Literature](./Topics%20and%20Literature.md): Guides on security topics, techniques, and key insights from books and papers.
+### 📚 Literature Notes
+- [Literature Notes](./Literature%20Notes.md)
+  - Notes on books, articles, and research papers with key insights and takeaways.
 
-### 🏁 Challenges and Write-Ups
-- [Challenges and Write-Ups](./Challenges%20and%20Write-Ups.md): CTF challenges, research notes, and reflections on progress.
+### 🔐 Topics Covered
+- [Topics Covered](./Topics%20Covered.md)
+  - In-depth guides on topics like command injection, packet processing, and TLS mechanics.
 
-### 🚀 Projects and Updates
-- [Projects and Updates](./Projects%20and%20Updates.md): Documentation of projects, updates, and hands-on experiences.
+### ✍️ Learning Summaries
+- [Learning Summaries](./Learning%20Summaries.md)
+  - Summarized insights from books, courses, and labs that have helped me in my journey.
+
+### 🏁 CTF Challenges
+- [CTF Challenges](./CTF%20Challenges.md)
+  - Write-ups from Capture The Flag (CTF) challenges.
+
+### 🗓️ Weekly Write-Ups
+- [Weekly Write-Ups](./Weekly%20Write-Ups.md)
+  - Day-by-day reflections on progress, challenges, and achievements.
+
+### 🔬 Research Corner
+- [Research Notes](./Research%20Notes.md)
+  - Deep dives into CVEs, offensive security techniques, and discoveries.
+
+### 🚀 Project Updates
+- [Project Updates](./Project%20Updates.md)
+  - Updates on ongoing projects focusing on offensive security.
+
+### 🛠️ My Projects
+- [My Projects](./My%20Projects.md)
+  - Documentation of personal and collaborative projects.
 
 ## 🎯 My Learning Approach
-- [My Approach](./My%20Approach.md): Hands-on practice, networked knowledge, and learning reflections.
+- [My Approach](./My%20Approach.md)
+  - Detailed explanation of my approach, including hands-on practice and reflections.
 
 ## 🤝 Get Involved
-- [Get Involved](./Get%20Involved.md): How to connect and engage.
+- [Get Involved](./Get%20Involved.md)
+  - Information on how readers can connect, ask questions, and engage with my journey.
 
 ## 📜 License
-- [License](./License.md): Content sharing details.
-
----
-
-*Explore, learn, and join me on this cybersecurity journey!*
+- [License](./License.md)
+  - License details for sharing or adapting the content of the blog.
