@@ -31,31 +31,18 @@
         </div>
     </header>
 
-    <!-- Sidebar Navigation with Content -->
-    <div id="sidebar" class="sidebar">
-        <button id="close-sidebar" class="close-sidebar">X</button>
-
-        <div class="sidebar-content">
-            {% if page.sidebar_image %}
-                <div class="sidebar-image">
-                    <img src="{{ page.sidebar_image | relative_url }}" alt="Sidebar Image">
-                </div>
-            {% endif %}
-
-            <div class="sidebar-text">
-                {{ page.sidebar_text }}
+    <!-- Full-Width Image Header with Overlay Title -->
+    {% if page.header_image and page.overlay_title %}
+        <div class="page-header-image">
+            <img src="{{ page.header_image | relative_url }}" alt="{{ page.overlay_title }}">
+            <div class="overlay-title">
+                <h1>{{ page.overlay_title }}</h1>
             </div>
         </div>
-    </div>
+    {% endif %}
 
     <!-- Main Content Area -->
     <div class="content">
-        {% if page.image %}
-            <div class="page-image">
-                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-            </div>
-        {% endif %}
-
         {{ content }}
     </div>
 
@@ -64,16 +51,10 @@
         document.addEventListener("DOMContentLoaded", function() {
             const toggleButton = document.getElementById("sidebar-toggle");
             const sidebar = document.getElementById("sidebar");
-            const closeButton = document.getElementById("close-sidebar");
 
             toggleButton.addEventListener("click", function() {
                 sidebar.classList.toggle("active");
                 toggleButton.classList.toggle("active");
-            });
-
-            closeButton.addEventListener("click", function() {
-                sidebar.classList.remove("active");
-                toggleButton.classList.remove("active");
             });
         });
     </script>
