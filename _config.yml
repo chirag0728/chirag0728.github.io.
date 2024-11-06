@@ -1,12 +1,12 @@
-title: "Cybersecurity Vault"
-description: "Notes on Cybersecurity, Learning and Projects"
-theme: jekyll-theme-minimal  # Base theme
+title: "Chirag's Cybersecurity Vault"
+description: "Notes on Cybersecurity, Learning Journey, and Projects"
+theme: jekyll-theme-minimal  # Base theme, though it won't affect custom layouts
 markdown: kramdown
 
-# Include custom CSS for styling
+# Include custom CSS and layouts
 include:
   - styles.css
+  - _layouts/default.html
 
-# Exclude unnecessary files from the site
 exclude:
-  - README.md
+README.md
