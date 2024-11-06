@@ -1,51 +1,48 @@
 /* Import Source Code Pro font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
-/* Default Dark Mode Styling */
+/* General Page Layout */
 body {
-    font-family: "Source Code Pro", monospace; /* Monospaced font for an Obsidian-like feel */
-    background-color: #1e1e1e; /* Dark background */
-    color: #c8c8c8; /* Light text color */
-    line-height: 1.6;
+    font-family: "Source Code Pro", monospace;
+    background-color: #1e1e1e;
+    color: #c8c8c8;
+    line-height: 1.4; /* Slightly reduce line-height for tighter spacing */
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Reduce spacing between sections */
+section.overview {
+    margin-bottom: 10px; /* Less space between sections */
+}
+
 /* Header Styling */
 h1, h2, h3, h4, h5, h6 {
-    color: #58a6ff; /* Light blue color for headers */
+    color: #58a6ff;
     font-weight: bold;
+    font-family: "Source Code Pro", monospace;
+    margin-left: 20px; /* Indent all titles to the left */
 }
 
-/* Links */
-a {
-    color: #58a6ff; /* Light blue for links */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Code Blocks */
-code, pre {
-    background-color: #282c34;
-    color: #e5e5e5;
-    padding: 5px;
-    border-radius: 4px;
-    font-family: "Source Code Pro", monospace; /* Monospaced font for code */
-    font-size: 0.9em;
-    overflow-x: auto;
-}
-
-/* Bullet Points and Lists */
+/* Indent Links and List Items */
 ul, ol {
-    padding-left: 20px;
+    padding-left: 40px; /* Increase padding for indentation */
+    margin-top: 5px; /* Reduce margin between items */
+    list-style: none; /* Remove default bullet points */
 }
 
-ul li, ol li {
-    margin: 5px 0;
+/* Style individual links with tight spacing */
+ul li a {
+    display: block;
+    margin-bottom: 5px; /* Space between links */
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Blockquotes */
@@ -57,70 +54,21 @@ blockquote {
     font-style: italic;
 }
 
-/* Tags */
-.tag {
-    display: inline-block;
-    background-color: #333;
-    color: #58a6ff;
-    padding: 2px 8px;
-    border-radius: 5px;
-    font-size: 0.8em;
-    margin-right: 5px;
-}
-
-/* Properties and Metadata */
-.properties {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #2a2a2a;
-    border-radius: 5px;
-    color: #c8c8c8;
-    font-size: 0.9em;
-}
-
-/* Light Mode Styling (Applied when .light-mode class is toggled on body) */
+/* Light Mode Styling */
 body.light-mode {
-    background-color: #ffffff; /* Light background */
-    color: #333333; /* Dark text color */
-    font-family: "Source Code Pro", monospace; /* Monospaced font in light mode */
+    background-color: #ffffff;
+    color: #333333;
 }
 
-/* Light Mode Headers */
 body.light-mode h1, 
 body.light-mode h2, 
 body.light-mode h3, 
 body.light-mode h4, 
 body.light-mode h5, 
 body.light-mode h6 {
-    color: #333333; /* Darker text for headers */
+    color: #333333;
 }
 
-/* Light Mode Links */
 body.light-mode a {
-    color: #1e70bf; /* Dark blue for links in light mode */
-}
-
-/* Light Mode Code Blocks */
-body.light-mode code, 
-body.light-mode pre {
-    background-color: #f5f5f5;
-    color: #333333;
-}
-
-/* Light Mode Blockquote */
-body.light-mode blockquote {
-    border-left: 3px solid #1e70bf;
-    color: #666666;
-}
-
-/* Light Mode Tags */
-body.light-mode .tag {
-    background-color: #ddd;
-    color: #333333;
-}
-
-/* Light Mode Properties */
-body.light-mode .properties {
-    background-color: #f0f0f0;
-    color: #333333;
+    color: #1e70bf;
 }
