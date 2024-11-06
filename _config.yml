@@ -1,6 +1,6 @@
 title: "Chirag's Cybersecurity Vault"
 description: "Notes on Cybersecurity, Learning Journey, and Projects"
-theme: jekyll-theme-minimal  # Base theme, though it won't affect custom layouts
+theme: jekyll-theme-minimal  # Base theme
 markdown: kramdown
 
 # Include custom CSS and layouts
