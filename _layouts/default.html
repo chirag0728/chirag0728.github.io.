@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title }}</title>
+    <title>{{ page.title | default: "Cybersecurity Vault" }}</title>
 
     <!-- Link to custom CSS -->
     <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
@@ -18,16 +18,7 @@
                 <div class="line line2"></div>
                 <div class="line line3"></div>
             </div>
-            <img src="/path/to/profile.jpg" alt="Profile Picture" class="profile-image">
-            <span class="profile-name">Chirag Dewan</span>
-        </div>
-        
-        <div class="header-title">
-            <h1>{{ page.title }}</h1>
-        </div>
-        
-        <div class="header-right">
-            <i class="fas fa-search search-icon"></i>
+            <span class="profile-name">Cybersecurity Vault</span>
         </div>
     </header>
 
@@ -41,6 +32,21 @@
         </div>
     {% endif %}
 
+    <!-- Sidebar Navigation -->
+    <div id="sidebar" class="sidebar">
+        <button id="close-sidebar" class="close-sidebar">X</button>
+
+        <div class="site-navigation">
+            <h2>📖 Site Navigation</h2>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/Literature%20Notes.md' | relative_url }}">Literature Notes</a></li>
+                <li><a href="{{ '/Topics%20Covered.md' | relative_url }}">Topics Covered</a></li>
+                <!-- Add other links as needed -->
+            </ul>
+        </div>
+    </div>
+
     <!-- Main Content Area -->
     <div class="content">
         {{ content }}
@@ -51,10 +57,16 @@
         document.addEventListener("DOMContentLoaded", function() {
             const toggleButton = document.getElementById("sidebar-toggle");
             const sidebar = document.getElementById("sidebar");
+            const closeButton = document.getElementById("close-sidebar");
 
             toggleButton.addEventListener("click", function() {
                 sidebar.classList.toggle("active");
                 toggleButton.classList.toggle("active");
+            });
+
+            closeButton.addEventListener("click", function() {
+                sidebar.classList.remove("active");
+                toggleButton.classList.remove("active");
             });
         });
     </script>
