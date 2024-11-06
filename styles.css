@@ -1,8 +1,11 @@
+/* Import Source Code Pro font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
 /* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: #000000; /* True black background */
-    color: #c8c8c8;
+    background-color: #ffffff; /* Set background to white */
+    color: #333333; /* Dark text for readability on white background */
     line-height: 1.4;
     margin: 0;
     padding: 0;
@@ -16,6 +19,8 @@ body {
     padding: 20px;
     max-width: 800px;
     transition: transform 0.3s ease; /* Smooth shift on sidebar open */
+    background-color: #ffffff; /* White background for main content */
+    color: #333333; /* Dark text on content */
     margin-left: 0; /* Default centered */
 }
 
@@ -24,10 +29,11 @@ body {
     transform: translateX(250px); /* Move content to the right */
 }
 
-/* Sidebar Styling */
+/* Sidebar (Pane) Styling */
 .sidebar {
     width: 250px;
-    background-color: #2a2a2a;
+    background-color: #000000; /* True black background for the sidebar */
+    color: #ffffff; /* White text in sidebar */
     position: fixed;
     top: 0;
     left: -250px; /* Start off-screen */
@@ -113,19 +119,19 @@ body {
     padding: 0;
 }
 
-/* Dark Mode Styling */
+/* Light Mode Styling */
 body.light-mode {
     background-color: #ffffff;
     color: #333333;
 }
 
 body.light-mode .sidebar {
-    background-color: #f0f0f0;
+    background-color: #000000;
 }
 
 body.light-mode .sidebar h2,
 body.light-mode .sidebar a {
-    color: #1e70bf;
+    color: #58a6ff;
 }
 
 body.light-mode h1, 
