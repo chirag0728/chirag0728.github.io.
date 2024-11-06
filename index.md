@@ -6,7 +6,7 @@
 ## 🏷️ Sections
 
 ### 🔍 About the Blog
-- [About the Blog](./About%20the%20Blog.md): Purpose of the blog, including learning goals, research areas, and key content types like research notes and CTFs.
+- [About the Blog](./aboutblog.md): Purpose of the blog, including learning goals, research areas, and key content types like research notes and CTFs.
 
 ### 📚 Literature Notes
 - [Literature Notes](./Literature%20Notes.md): Notes on books, articles, and research papers I read, with key insights and takeaways that help shape my understanding of cybersecurity.
