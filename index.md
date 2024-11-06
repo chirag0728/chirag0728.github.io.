@@ -1,7 +1,7 @@
 # Index: Chirag's Cybersecurity Vault
 
 ## 🗂 Overview
-- [Chirag's Cybersecurity Learning Journey](./Chirag's%20Cybersecurity%20Learning%20Journey.md): Introduction to my blog, covering my journey, goals, and the content I share.
+- [Chirag's Cybersecurity Learning Journey](./Chirag%27s%20Cybersecurity%20Learning%20Journey.md): Introduction to my blog, covering my journey, goals, and the content I share.
 
 ## 🏷️ Sections
 
@@ -41,9 +41,15 @@
 ## 📜 License
 - [License](./License.md): License details for sharing or adapting the content of the blog.
 
-  <button id="dark-mode-toggle">Toggle Dark Mode</button>
+---
+
+*Explore, learn, and join me on this cybersecurity journey!*
+
+<!-- Dark Mode Toggle Button -->
+<button id="dark-mode-toggle">Toggle Dark Mode</button>
 
 <script>
+// Toggle between light and dark mode
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.getElementById("dark-mode-toggle");
     toggleButton.addEventListener("click", function() {
@@ -57,8 +63,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
-
-
----
-
-*Explore, learn, and join me on this cybersecurity journey!*
