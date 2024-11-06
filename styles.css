@@ -1,3 +1,6 @@
+/* Import Source Code Pro font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
 /* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
@@ -6,60 +9,125 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
     overflow-x: hidden;
 }
 
-/* Centering Content */
-.content {
-    padding: 20px;
-    max-width: 800px;
-    transition: transform 0.3s ease;
-    background-color: #ffffff;
-    color: #333333;
-    margin-left: 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000; /* True black background */
+    color: #ffffff;
+    padding: 10px 20px;
+    position: relative;
 }
 
-.content.shifted {
-    transform: translateX(250px);
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
-/* Page Image Styling */
-.page-image {
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.header-title {
+    flex: 1;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.page-image img {
+.header-title h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Sidebar Toggle Button (Hamburger Icon) */
+.sidebar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1100;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Hamburger Lines */
+.sidebar-toggle .line {
+    background-color: #58a6ff;
+    height: 3px;
     width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
 }
 
-/* Sidebar */
+/* Transform Hamburger Icon into "X" */
+.sidebar-toggle.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.sidebar-toggle.active .line2 {
+    opacity: 0; /* Hide the middle line */
+}
+
+.sidebar-toggle.active .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Sidebar (Pane) Styling */
 .sidebar {
     width: 250px;
-    background-color: #000000;
+    background-color: #000000; /* True black */
     color: #ffffff;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Initially hidden off-screen */
     height: 100vh;
     overflow-y: auto;
-    transition: left 0.3s ease;
+    transition: left 0.3s ease; /* Slide-in effect */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
 .sidebar.active {
-    left: 0;
+    left: 0; /* Slide in when active */
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: #58a6ff;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .site-navigation {
@@ -91,49 +159,79 @@ body {
     text-decoration: underline;
 }
 
-/* Close Button for Sidebar */
-.close-sidebar {
-    background: none;
-    border: none;
-    color: #58a6ff;
-    font-size: 1.5em;
-    cursor: pointer;
-    padding: 0;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+/* Centering Content Area */
+.content {
+    padding: 20px;
+    max-width: 800px;
+    background-color: #ffffff;
+    color: #333333;
+    margin-top: 60px; /* Add space below header */
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Sidebar Toggle Button */
-.sidebar-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 1100;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+/* Shift content to the right when sidebar opens */
+.content.shifted {
+    transform: translateX(250px);
 }
 
-.sidebar-toggle .line {
-    background-color: #58a6ff;
-    height: 3px;
+/* Page Image Styling */
+.page-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-image img {
     width: 100%;
-    transition: all 0.3s ease;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
 
-/* Transform Hamburger Icon into "X" */
-.sidebar-toggle.active .line1 {
-    transform: rotate(45deg) translate(5px, 5px);
+/* Link Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.sidebar-toggle.active .line2 {
-    opacity: 0;
+a:hover {
+    text-decoration: underline;
 }
 
-.sidebar-toggle.active .line3 {
-    transform: rotate(-45deg) translate(5px, -5px);
+/* Bullet Points and Lists */
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin: 8px 0;
+}
+
+/* Code Blocks */
+code, pre {
+    background-color: #f5f5f5;
+    color: #333333;
+    padding: 5px;
+    border-radius: 4px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.9em;
+    overflow-x: auto;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #007bff;
+    color: #555555;
+    padding-left: 15px;
+    margin-left: 0;
+    font-style: italic;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
