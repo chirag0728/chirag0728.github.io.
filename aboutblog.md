@@ -1,8 +1,3 @@
----
-layout: default
-title: "About This Blog"
----
-
 # About This Blog
 
 Hey there! I'm Chirag, and welcome to my blog. This is where I document my journey through the ever-changing world of cybersecurity. Here, I share everything I'm learning as I dive deeper into offensive security, packet analysis, and network protocols. My goal is to break down complex cybersecurity topics, share my experiments, and hopefully give back to the community that's helped me so much.
