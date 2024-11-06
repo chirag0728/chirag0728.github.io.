@@ -1,10 +1,7 @@
-/* Import Source Code Pro font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
-
 /* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: #f8f9fa; /* Light grey for subtle contrast */
+    background-color: #f8f9fa;
     color: #333333;
     line-height: 1.6;
     margin: 0;
@@ -19,14 +16,13 @@ body {
     padding: 20px;
     max-width: 800px;
     transition: transform 0.3s ease;
-    background-color: #ffffff; /* White background for main content */
+    background-color: #ffffff;
     color: #333333;
     margin-left: 0;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Shift content to the right when sidebar opens */
 .content.shifted {
     transform: translateX(250px);
 }
@@ -46,7 +42,7 @@ body {
     margin-top: 20px;
 }
 
-/* Sidebar (Pane) Styling */
+/* Sidebar */
 .sidebar {
     width: 250px;
     background-color: #000000;
@@ -74,7 +70,6 @@ body {
     color: #58a6ff;
     font-size: 1.2em;
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .sidebar ul {
@@ -96,6 +91,19 @@ body {
     text-decoration: underline;
 }
 
+/* Close Button for Sidebar */
+.close-sidebar {
+    background: none;
+    border: none;
+    color: #58a6ff;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 /* Sidebar Toggle Button */
 .sidebar-toggle {
     position: fixed;
@@ -110,7 +118,6 @@ body {
     justify-content: space-around;
 }
 
-/* Hamburger Lines */
 .sidebar-toggle .line {
     background-color: #58a6ff;
     height: 3px;
@@ -129,70 +136,4 @@ body {
 
 .sidebar-toggle.active .line3 {
     transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* No Background or Border for Sidebar Toggle */
-.sidebar-toggle {
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-/* Section Headers */
-h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333333;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 8px;
-}
-
-/* Link Styling */
-a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Bullet Points and Lists */
-ul, ol {
-    padding-left: 20px;
-}
-
-ul li, ol li {
-    margin: 8px 0;
-}
-
-/* Code Blocks */
-code, pre {
-    background-color: #f5f5f5;
-    color: #333333;
-    padding: 5px;
-    border-radius: 4px;
-    font-family: "Source Code Pro", monospace;
-    font-size: 0.9em;
-    overflow-x: auto;
-}
-
-/* Blockquotes */
-blockquote {
-    border-left: 4px solid #007bff;
-    color: #555555;
-    padding-left: 15px;
-    margin-left: 0;
-    font-style: italic;
-    background-color: #f9f9f9;
-    padding: 10px 15px;
-    border-radius: 4px;
-    margin-top: 1em;
-    margin-bottom: 1em;
 }
