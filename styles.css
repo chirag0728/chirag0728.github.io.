@@ -1,0 +1,76 @@
+/* General Page Layout */
+body {
+    font-family: "Source Code Pro", monospace; /* Monospaced font for an Obsidian-like feel */
+    background-color: #1e1e1e; /* Dark background */
+    color: #c8c8c8; /* Light text color */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1, h2, h3, h4, h5, h6 {
+    color: #58a6ff; /* Light blue for headers */
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Code Blocks */
+code, pre {
+    background-color: #282c34;
+    color: #e5e5e5;
+    padding: 5px;
+    border-radius: 4px;
+    font-family: "Fira Code", monospace;
+    font-size: 0.9em;
+    overflow-x: auto;
+}
+
+/* Bullet Points and Lists */
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin: 5px 0;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 3px solid #58a6ff;
+    color: #d1d1d1;
+    padding-left: 15px;
+    margin-left: 0;
+    font-style: italic;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    background-color: #333;
+    color: #58a6ff;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+
+/* Properties and Metadata */
+.properties {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    color: #c8c8c8;
+    font-size: 0.9em;
+}
