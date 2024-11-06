@@ -1,9 +1,9 @@
 /* Import Source Code Pro font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
-/* General Page Layout */
+/* Default Dark Mode Styling */
 body {
-    font-family: "Source Code Pro", monospace; /* Monospaced font */
+    font-family: "Source Code Pro", monospace; /* Monospaced font for an Obsidian-like feel */
     background-color: #1e1e1e; /* Dark background */
     color: #c8c8c8; /* Light text color */
     line-height: 1.6;
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Links */
 a {
-    color: #58a6ff;
+    color: #58a6ff; /* Light blue for links */
     text-decoration: none;
 }
 
@@ -78,26 +78,29 @@ blockquote {
     font-size: 0.9em;
 }
 
-/* Light Mode Styles */
+/* Light Mode Styling (Applied when .light-mode class is toggled on body) */
 body.light-mode {
-    background-color: #ffffff;
-    color: #333333;
-    font-family: "Source Code Pro", monospace;
+    background-color: #ffffff; /* Light background */
+    color: #333333; /* Dark text color */
+    font-family: "Source Code Pro", monospace; /* Monospaced font in light mode */
 }
 
+/* Light Mode Headers */
 body.light-mode h1, 
 body.light-mode h2, 
 body.light-mode h3, 
 body.light-mode h4, 
 body.light-mode h5, 
 body.light-mode h6 {
-    color: #333333;
+    color: #333333; /* Darker text for headers */
 }
 
+/* Light Mode Links */
 body.light-mode a {
-    color: #1e70bf;
+    color: #1e70bf; /* Dark blue for links in light mode */
 }
 
+/* Light Mode Code Blocks */
 body.light-mode code, 
 body.light-mode pre {
     background-color: #f5f5f5;
@@ -110,7 +113,7 @@ body.light-mode blockquote {
     color: #666666;
 }
 
-/* Light Mode Tag */
+/* Light Mode Tags */
 body.light-mode .tag {
     background-color: #ddd;
     color: #333333;
