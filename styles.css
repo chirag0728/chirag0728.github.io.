@@ -4,7 +4,7 @@
 /* General Page Layout */
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: #1e1e1e;
+    background-color: #000000; /* Set background to true black */
     color: #c8c8c8;
     line-height: 1.4;
     margin: 0;
@@ -64,10 +64,10 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    cursor: pointer;
-    z-index: 1100;
     width: 30px;
     height: 30px;
+    cursor: pointer;
+    z-index: 1100;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -78,6 +78,13 @@ body {
     height: 3px;
     width: 100%;
     transition: all 0.3s ease;
+}
+
+/* Ensure there's no background or border around the button */
+.sidebar-toggle {
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 /* Main Content Styling */
