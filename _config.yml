@@ -8,5 +8,10 @@ include:
   - styles.css
   - _layouts/default.html
 
+# Exclude files that should not be processed by Jekyll
 exclude:
-README.md
+  - README.md
+
+# GitHub Pages plugins
+plugins:
+  - jekyll-feed
