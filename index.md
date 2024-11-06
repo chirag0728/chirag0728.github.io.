@@ -41,6 +41,24 @@
 ## 📜 License
 - [License](./License.md): License details for sharing or adapting the content of the blog.
 
+  <button id="dark-mode-toggle">Toggle Dark Mode</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    toggleButton.addEventListener("click", function() {
+        document.body.classList.toggle("light-mode");
+        localStorage.setItem("theme", document.body.classList.contains("light-mode") ? "light" : "dark");
+    });
+
+    // Load saved theme from local storage
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+    }
+});
+</script>
+
+
 ---
 
 *Explore, learn, and join me on this cybersecurity journey!*
