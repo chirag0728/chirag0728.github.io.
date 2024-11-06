@@ -34,6 +34,12 @@
 
     <!-- Main Content Area -->
     <div class="content">
+        {% if page.image %}
+            <div class="page-image">
+                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+            </div>
+        {% endif %}
+
         {{ content }}
     </div>
 
