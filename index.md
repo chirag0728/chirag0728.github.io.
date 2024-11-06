@@ -22,10 +22,6 @@
 - [CTF Challenges](./CTF%20Challenges.md)
   - Write-ups from Capture The Flag (CTF) challenges.
 
-### 🗓️ Weekly Write-Ups
-- [Weekly Write-Ups](./Weekly%20Write-Ups.md)
-  - Day-by-day reflections on progress, challenges, and achievements.
-
 ### 🔬 Research Corner
 - [Research Notes](./Research%20Notes.md)
   - Deep dives into CVEs, offensive security techniques, and discoveries.
